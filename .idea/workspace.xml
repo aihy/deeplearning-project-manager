@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56791310-e738-44ad-acc7-c55b2162ab96" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deeplearning-project-manager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cron.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nvidiasmi_rest/application.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/color-switcher.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/alizarin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/preset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/turquoise.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/colors/wisteria.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/line-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/menu_sideslide.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/nivo-lightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/owl.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/LineIcons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/LineIcons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/LineIcons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/LineIcons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/about/img-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/about/img-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/about/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/bg/bg-cta.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/bg/bg-subs.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/bg/hero-area-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/bg/video.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/blog/avater-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/blog/blog-1-big.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/blog/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/blog/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/blog/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/blog/ta-avater.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/clients/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/clients/img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/clients/img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/clients/img4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/clients/img5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/clients/img6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/clients/img7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/clients/img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/dummy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/hero-area.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/instagram/insta1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/instagram/insta2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/instagram/insta3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/instagram/insta4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/instagram/insta5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/instagram/insta6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/intro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/logo.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/map-marker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/portfolio/img-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/portfolio/img-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/portfolio/img-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/portfolio/img-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/portfolio/img-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/portfolio/img-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/portfolio/img-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/slider/bg-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/slider/bg-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/slider/bg-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/team/member-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/team/team1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/team/team2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/team/team3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/team/team4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/testimonial/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/testimonial/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/testimonial/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/timer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/classie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/color-switcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/contact-form-script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/form-validator.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.mixitup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.stellar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.vide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/nivo-lightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/scrolling-nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/wow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/signin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tunnel.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="aihy" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WCh2EtUTxFqub3vlGuKfvP16cX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="deeplearning-project-manager" type="PythonConfigurationType" factoryName="Python">
+      <module name="deeplearning-project-manager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56791310-e738-44ad-acc7-c55b2162ab96" name="Default Changelist" comment="" />
+      <created>1578659274727</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578659274727</updated>
+      <workItem from="1578659283790" duration="261000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first version" />
+    <option name="LAST_COMMIT_MESSAGE" value="first version" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="515" y="138" key="CommitChangelistDialog2" timestamp="1578659521451">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="515" y="138" key="CommitChangelistDialog2/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578659521451" />
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1578659472351">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578659472351" />
+  </component>
+</project>
