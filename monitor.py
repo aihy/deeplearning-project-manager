@@ -3,8 +3,7 @@ import xml.dom.minidom
 
 from requests import get
 
-from app import db, Server, GpuMonitor
-from tunnel import start_tunnel
+from app import db, Server, GpuMonitor, Port
 
 
 def begin_monit():
@@ -12,7 +11,7 @@ def begin_monit():
     r_list = Server.query.all()
     for it in r_list:
         server_ip = it.serverIp
-        ac_port = start_tunnel(server_ip, "flask")
+        ac_port = Port.query.filter_by(serverIp=server_ip, type="flask").first().port
         get_xml = get("http://127.0.0.1:" + str(ac_port) + "/nvidia")
         newdom = xml.dom.minidom.parseString(get_xml.text)
         newroot = newdom.documentElement

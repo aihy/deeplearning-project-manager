@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56791310-e738-44ad-acc7-c55b2162ab96" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/start_tunnel.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tunnel.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +131,7 @@
       <workItem from="1578659283790" duration="1323000" />
       <workItem from="1578918900946" duration="12893000" />
       <workItem from="1579143001534" duration="378000" />
-      <workItem from="1579143395271" duration="19030000" />
+      <workItem from="1579143395271" duration="20361000" />
     </task>
     <task id="LOCAL-00001" summary="first version">
       <created>1578659560762</created>
@@ -145,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579171880821</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="内测版">
+      <created>1579173321607</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579173321607</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,48 +188,48 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578918934985" />
-    <state x="515" y="138" key="CommitChangelistDialog2" timestamp="1579171879998">
+    <state x="515" y="138" key="CommitChangelistDialog2" timestamp="1579173321155">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="515" y="138" key="CommitChangelistDialog2/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578659560284" />
-    <state x="515" y="138" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579171879998" />
-    <state width="1878" height="528" key="GridCell.Tab.0.bottom" timestamp="1579168856686">
+    <state x="515" y="138" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579173321155" />
+    <state width="1878" height="528" key="GridCell.Tab.0.bottom" timestamp="1579176222669">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1579161628685" />
     <state width="1878" height="297" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.209.1366.745@0.0.1920.1080" timestamp="1578918010984" />
-    <state width="1878" height="528" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579168856686" />
+    <state width="1878" height="528" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579176222669" />
     <state width="1878" height="260" key="GridCell.Tab.0.bottom/0.23.1920.977@0.23.1920.977" timestamp="1579163503840" />
-    <state width="1878" height="528" key="GridCell.Tab.0.center" timestamp="1579168856684">
+    <state width="1878" height="528" key="GridCell.Tab.0.center" timestamp="1579176222667">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="260" key="GridCell.Tab.0.center/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1579161628684" />
     <state width="1878" height="297" key="GridCell.Tab.0.center/0.0.1920.1080/1920.209.1366.745@0.0.1920.1080" timestamp="1578918010981" />
-    <state width="1878" height="528" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579168856684" />
+    <state width="1878" height="528" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579176222667" />
     <state width="1878" height="260" key="GridCell.Tab.0.center/0.23.1920.977@0.23.1920.977" timestamp="1579163503838" />
-    <state width="1878" height="528" key="GridCell.Tab.0.left" timestamp="1579168856683">
+    <state width="1878" height="528" key="GridCell.Tab.0.left" timestamp="1579176222666">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="260" key="GridCell.Tab.0.left/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1579161628682" />
     <state width="1878" height="297" key="GridCell.Tab.0.left/0.0.1920.1080/1920.209.1366.745@0.0.1920.1080" timestamp="1578918010978" />
-    <state width="1878" height="528" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579168856683" />
+    <state width="1878" height="528" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579176222666" />
     <state width="1878" height="260" key="GridCell.Tab.0.left/0.23.1920.977@0.23.1920.977" timestamp="1579163503837" />
-    <state width="1878" height="528" key="GridCell.Tab.0.right" timestamp="1579168856685">
+    <state width="1878" height="528" key="GridCell.Tab.0.right" timestamp="1579176222668">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="260" key="GridCell.Tab.0.right/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1579161628684" />
     <state width="1878" height="297" key="GridCell.Tab.0.right/0.0.1920.1080/1920.209.1366.745@0.0.1920.1080" timestamp="1578918010983" />
-    <state width="1878" height="528" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579168856685" />
+    <state width="1878" height="528" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579176222668" />
     <state width="1878" height="260" key="GridCell.Tab.0.right/0.23.1920.977@0.23.1920.977" timestamp="1579163503839" />
     <state width="219" height="457" key="HiddenNamespacesPopup" timestamp="1578660012865">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="219" height="457" key="HiddenNamespacesPopup/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578660012865" />
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1579171885868">
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1579173324117">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578659563211" />
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579171885868" />
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579173324117" />
     <state x="821" y="409" width="512" height="382" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1579143225695">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -237,6 +246,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/deeplearning_project_manager$deeplearning_project_manager.coverage" NAME="deeplearning-project-manager Coverage Results" MODIFIED="1578660581067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/deeplearning_project_manager$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1579168824554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/deeplearning_project_manager$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1579175316792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
