@@ -25,7 +25,7 @@
                             <script type="text/javascript">
                                 var myChart{{ loop.index }} = echarts.init(document.getElementById('chart{{ loop.index }}'));
                                 myChart{{ loop.index }}.showLoading();
-                                $.get('http://127.0.0.1:5000/getmonitordata?ip=' + "{{ server[0] }}").done(function (data) {
+                                $.get('{{ url_for("gmd") }}?ip=' + "{{ server[0] }}").done(function (data) {
                                     myChart{{ loop.index }}.hideLoading();
                                     myChart{{ loop.index }}.setOption(
                                         option = {

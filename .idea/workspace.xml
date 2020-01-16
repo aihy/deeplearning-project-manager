@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56791310-e738-44ad-acc7-c55b2162ab96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/school_server/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/pt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/tf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/clipboard.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cron.py" beforeDir="false" afterPath="$PROJECT_DIR$/cron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nvidiasmi_rest/application.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/color-switcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/color-switcher.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +129,7 @@
       <workItem from="1578659283790" duration="1323000" />
       <workItem from="1578918900946" duration="12893000" />
       <workItem from="1579143001534" duration="378000" />
-      <workItem from="1579143395271" duration="18344000" />
+      <workItem from="1579143395271" duration="19030000" />
     </task>
     <task id="LOCAL-00001" summary="first version">
       <created>1578659560762</created>
@@ -154,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578659560762</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="内测版">
+      <created>1579171880821</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579171880821</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,9 +165,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first version" />
-    <option name="LAST_COMMIT_MESSAGE" value="first version" />
+    <MESSAGE value="内测版" />
+    <option name="LAST_COMMIT_MESSAGE" value="内测版" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -186,11 +179,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578918934985" />
-    <state x="515" y="138" key="CommitChangelistDialog2" timestamp="1579171783732">
+    <state x="515" y="138" key="CommitChangelistDialog2" timestamp="1579171879998">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="515" y="138" key="CommitChangelistDialog2/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578659560284" />
-    <state x="515" y="138" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579171783732" />
+    <state x="515" y="138" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579171879998" />
     <state width="1878" height="528" key="GridCell.Tab.0.bottom" timestamp="1579168856686">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -223,10 +216,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="219" height="457" key="HiddenNamespacesPopup/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578660012865" />
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1578659563211">
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1579171885868">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578659563211" />
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579171885868" />
     <state x="821" y="409" width="512" height="382" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1579143225695">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -235,11 +229,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="653" y="360" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1579143013042" />
-    <state x="640" y="297" width="983" height="669" key="find.popup" timestamp="1579161370882">
+    <state x="640" y="297" width="983" height="669" key="find.popup" timestamp="1579173302450">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="640" y="297" width="983" height="669" key="find.popup/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1579161370882" />
-    <state x="640" y="297" width="983" height="669" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1579090711808" />
+    <state x="640" y="297" width="983" height="669" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1579173302450" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/deeplearning_project_manager$deeplearning_project_manager.coverage" NAME="deeplearning-project-manager Coverage Results" MODIFIED="1578660581067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
