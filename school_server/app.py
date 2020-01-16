@@ -64,8 +64,8 @@ def new():
     client = docker.from_env()
     ports = client.containers.get(container_id).ports
     name = client.containers.get(container_id).name
-    j_port = ports['10001/tcp'][0]['HostPort']
-    t_port = ports['10002/tcp'][0]['HostPort']
+    j_port = ports['8888/tcp'][0]['HostPort']
+    t_port = ports['9999/tcp'][0]['HostPort']
     end_time = time()
     re = {"uid": uid, "j_port": j_port, "t_port": t_port, "container_id": container_id, "name": name,
           "time": end_time - begin_time}
