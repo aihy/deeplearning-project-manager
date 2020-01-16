@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56791310-e738-44ad-acc7-c55b2162ab96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/start_tunnel.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tunnel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +129,7 @@
       <workItem from="1578659283790" duration="1323000" />
       <workItem from="1578918900946" duration="12893000" />
       <workItem from="1579143001534" duration="378000" />
-      <workItem from="1579143395271" duration="20361000" />
+      <workItem from="1579143395271" duration="21932000" />
     </task>
     <task id="LOCAL-00001" summary="first version">
       <created>1578659560762</created>
@@ -154,7 +152,28 @@
       <option name="project" value="LOCAL" />
       <updated>1579173321607</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="内测版">
+      <created>1579176724838</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579176724838</updated>
+    </task>
+    <task id="LOCAL-00005" summary="内测版">
+      <created>1579179956198</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579179956198</updated>
+    </task>
+    <task id="LOCAL-00006" summary="内测版">
+      <created>1579179966184</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579179966184</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,11 +207,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="205" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578918934985" />
-    <state x="515" y="138" key="CommitChangelistDialog2" timestamp="1579173321155">
+    <state x="515" y="138" key="CommitChangelistDialog2" timestamp="1579179965898">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="515" y="138" key="CommitChangelistDialog2/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578659560284" />
-    <state x="515" y="138" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579173321155" />
+    <state x="515" y="138" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579179965898" />
     <state width="1878" height="528" key="GridCell.Tab.0.bottom" timestamp="1579176222669">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -225,11 +244,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="219" height="457" key="HiddenNamespacesPopup/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578660012865" />
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1579173324117">
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1579179968382">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.186.1366.768@0.0.1920.1080" timestamp="1578659563211" />
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579173324117" />
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579179968382" />
     <state x="821" y="409" width="512" height="382" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1579143225695">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
