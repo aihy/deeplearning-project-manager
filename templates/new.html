@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+{% block title %}新建项目{% endblock %}
+{% block body %}
+    <section id="contact" class="section">
+        <div class="contact-form">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">新建项目</h2>
+                    <span>新建</span>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact-block">
+                            <form method=post>
+                                <div class="row justify-content-center">
+                                    <div class="col-auto">
+                                        <input class="radio image-radio" type="radio" name="image" id="radio1"
+                                               value="pytorch"/>
+                                        <img src="{{ url_for("static",filename="img/pt.png") }}" onclick="click1();"/>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input class="radio image-radio" type="radio" name="image" id="radio2"
+                                               value="tensorflow"/>
+                                        <img src="{{ url_for("static",filename="img/tf.png") }}" onclick="click2();"/>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select class="form-control" id="version-select" name="version">
+                                                <option value="" disabled>请先选择框架</option>
+                                            </select>
+                                            <select class="form-control" name="server">
+                                                <option value="" disabled>请选择服务器</option>
+                                                <option value="183.174.228.86">86</option>
+                                                <option value="183.174.228.96">96</option>
+                                            </select>
+                                            <input type="text" class="form-control" id="proname" name="proname"
+                                                   placeholder="请输入项目名称（英文）" required data-error="请输入项目名称（英文）">
+                                            <input type="text" class="form-control" id="path" name="path"
+                                                   placeholder="请输入项目路径" required data-error="请输入项目路径">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="submit-button">
+                                        <button class="btn btn-common btn-effect" id="submit" type="submit">创建项目
+                                        </button>
+                                        <div id="msgSubmit" class="h3 hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $('.image-radio').change(function () {
+            if (this.value === 'pytorch') {
+                $('#version-select').html(`
+                <option value="" disabled>请选择版本</option>
+                <option value="PyTorch1.3-cuda10.1-cudnn7">PyTorch1.3-cuda10.1-cudnn7</option>
+                <option value="PyTorch0.4.1-cuda9-cudnn7">PyTorch0.4.1-cuda9-cudnn7</option>
+                `);
+            } else {
+                $('#version-select').html(`
+                <option value="" disabled>请选择版本</option>
+                <option value="Tensorflow2.1.0-cuda10.1">Tensorflow2.1.0-cuda10.1</option>
+                `);
+            }
+        });
+
+        function click1() {
+            $(radio1).prop('checked', 'checked');
+            $('#version-select').html(`
+                <option value="" disabled>请选择版本</option>
+                <option value="PyTorch1.3-cuda10.1-cudnn7">PyTorch1.3-cuda10.1-cudnn7</option>
+                <option value="PyTorch0.4.1-cuda9-cudnn7">PyTorch0.4.1-cuda9-cudnn7</option>
+                `);
+        }
+
+        function click2() {
+            $(radio2).prop('checked', 'checked');
+            $('#version-select').html(`
+                <option value="" disabled>请选择版本</option>
+                <option value="Tensorflow2.1.0-cuda10.1">Tensorflow2.1.0-cuda10.1</option>
+                `)
+        }
+
+        $('#proname').change(function () {
+            $('#path').val('/home/{{ nameinserver }}/' + this.value);
+        })
+    </script>
+
+{% endblock %}

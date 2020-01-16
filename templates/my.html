@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block title %}我的项目{% endblock %}
+{% block body %}
+    <section id="contact" class="section">
+        <div class="contact-form">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">我的项目</h2>
+                    <span>我的</span>
+                </div>
+                <div class="row">
+
+                    {% for c in ac %}
+
+                        <div class="col-12">
+                            <div class="item-boxes services-item wow fadeInDown" data-wow-delay="{{ 0.2*loop.index }}s">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <p class="fa-paragraph">项目建立日期：{{ c.gmtCreate }}</p>
+                                        <p class="fa-paragraph">容器名：{{ c.containerName }}</p>
+                                        <p class="fa-paragraph">项目路径：{{ c.path }}</p>
+                                        <p class="fa-paragraph">环境：{{ c.imageVersion }}</p>
+                                        <p class="fa-paragraph">所在服务器：{{ c.serverIp }}</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-common btn-effect" type="button" title="进入Jupyter Lab"
+                                                data-container="body" data-toggle="popover" data-placement="bottom"
+                                                data-html="true"
+                                                data-content="请<button class='button' data-clipboard-text='while true;do ssh -p 5102 {{ c.userInServer }}@{{ c.serverIp }} -L {{ c.jport }}:127.0.0.1:{{ c.jport }} -N;done;'>点我</button>复制指令，到本机终端粘贴运行  <br> 然后<a href='http://127.0.0.1:{{ c.jport }}' target='_blank'>点我打开</a>，密码是6666<div id='alert'></div>">
+                                            进入Jupyter Lab
+                                        </button>
+
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-common btn-effect" type="button" title="进入Tensorboard"
+                                                data-container="body" data-toggle="popover" data-placement="bottom"
+                                                data-html="true"
+                                                data-content="请<button class='button' data-clipboard-text='while true;do ssh -p 5102 {{ c.userInServer }}@{{ c.serverIp }} -L {{ c.tport }}:127.0.0.1:{{ c.tport }} -N;done;'>点我</button>复制指令，到本机终端粘贴运行  <br> 然后<a href='http://127.0.0.1:{{ c.tport }}' target='_blank'>点我打开</a><div id='alert'></div>">
+                                            进入Tensorboard
+                                        </button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-common btn-effect" type="button" title="进入终端"
+                                                data-container="body" data-toggle="popover" data-placement="bottom"
+                                                data-html="true"
+                                                data-content="请先<button class='button' data-clipboard-text='ssh -p 5102 {{ c.userInServer }}@{{ c.serverIp }}'>点我</button>复制指令，到本机终端粘贴运行，进入服务器<br>然后再<button class='button' data-clipboard-text='docker exec -it -u {{ c.uid }}:{{ c.uid }} {{ c.containerId }} /bin/bash'>点我</button>复制指令，到服务器终端粘贴运行，进入项目终端<br>进入后，推荐使用<a href='https://byobu.org/' target='_blank'>byobu</a>替代tmux<div id='alert'></div>">
+                                            进入终端
+                                        </button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-common btn-effect" type="button" title="删除项目"
+                                                data-container="body" data-toggle="popover" data-placement="bottom"
+                                                data-html="true"
+                                                data-content="<div class='alert alert-warning'>
+        <a href='#' class='close' data-dismiss='alert'>
+            &times;
+        </a>
+        <strong>注意</strong>此操作不会删除目录{{ c.path }}</div>真的要删除容器吗？<br><a href='{{ url_for("del_container") }}?name={{ c.containerName }}'>确认删除</a>">
+                                            删除项目
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $(function () {
+            $("[data-toggle='popover']").popover();
+        });
+        var clipboard = new ClipboardJS('.button');
+        clipboard.on('success', function (e) {
+            console.info('Action:', e.action);
+            console.info('Text:', e.text);
+            console.info('Trigger:', e.trigger);
+            $('#alert').html(`
+        <div class="alert alert-warning">
+        <a href="#" class="close" data-dismiss="alert">
+            &times;
+        </a>
+        <strong>复制成功！</strong>请到终端粘贴运行
+        </div>
+           `);
+            e.clearSelection();
+        });
+
+        clipboard.on('error', function (e) {
+            console.error('Action:', e.action);
+            console.error('Trigger:', e.trigger);
+        });
+
+    </script>
+{% endblock %}

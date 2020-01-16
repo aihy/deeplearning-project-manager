@@ -1,8 +1,9 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from flask import Flask, jsonify, render_template, session, redirect, url_for, request
 from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
+from requests import get
 
 app = Flask(__name__)
 app.secret_key = b"\x9b8'\x18\x9c4E\xad\x1b\x84\x0fh\xa5\x17f\x1c"
@@ -33,13 +34,17 @@ def gmd():
     for i in range(gpu_amount):
         lgd.append("GPU" + str(i))
         lgd.append("")
-    time_all = GpuMonitor.query.filter_by(serverIp=ip, gpuNumber=0).all()
+    time_all = GpuMonitor.query.filter(GpuMonitor.serverIp == ip, GpuMonitor.gpuNumber == 0,
+                                       GpuMonitor.gmtCreate > (datetime.now() + timedelta(days=-1)).strftime(
+                                           "%Y-%m-%d %H:%M:%S")).all()
     x = []
     for time in time_all:
         x.append(time.gmtCreate)
     y = {"xl": x, "lgd": lgd}
     for i in range(gpu_amount):
-        gpu_all = GpuMonitor.query.filter_by(serverIp=ip, gpuNumber=i).all()
+        gpu_all = GpuMonitor.query.filter(GpuMonitor.serverIp == ip, GpuMonitor.gpuNumber == 0,
+                                          GpuMonitor.gmtCreate > (datetime.now() + timedelta(days=-1)).strftime(
+                                              "%Y-%m-%d %H:%M:%S")).all()
         y1 = []
         y2 = []
         for moni in gpu_all:
@@ -71,8 +76,10 @@ def signin():
         name = request.form["username"]
         passwd = request.form["password"]
         passwd_agn = request.form["password_again"]
+        name_in_server = request.form["nameinserver"]
         if passwd != passwd_agn:
             return render_template("signin.html", error="您两次输入的密码不一致！", notlogin=1)
+        # TODO 把密码一致检测放到js里面
         # 先检查name是否在UserControl表中，UserControl表中的用户才允许注册
         user_control = UserControl.query.filter_by(username=name).first()
         if user_control is None:
@@ -80,20 +87,111 @@ def signin():
         # 再检查要注册的姓名是否已经注册了
         user = User.query.filter_by(username=name).first()
         if user is None:
-            db.session.add(User(username=name, password=passwd))
+            db.session.add(User(username=name, password=passwd, userInServer=name_in_server))
             db.session.commit()
             session["username"] = name
             return redirect(url_for("index"))
         else:
-            return render_template("signin.html", login=1)
+            return render_template("signin.html", error2=1, notlogin=1)
+        # TODO 加入google authenticator
     else:
         return render_template("signin.html", notlogin=1)
 
+
+# TODO 加入添加服务器页面
 
 @app.route("/logout")
 def logout():
     session.pop("username")
     return redirect(url_for("index"))
+
+
+@app.route("/new", methods=["GET", "POST"])
+def new():
+    if "username" not in session:
+        return redirect(url_for("login"))
+    else:
+        name = session.get("username")
+        nameinserver = User.query.filter_by(username=name).first().userInServer
+        if request.method == "POST":
+            server_ip = request.form.get("server")
+            path = request.form.get("path")
+            if path == '/':
+                render_template("new.html", username=name, nameinserver=nameinserver)
+            image_version = request.form["version"]
+            if image_version == "PyTorch1.3-cuda10.1-cudnn7":
+                image = "wzh-pytorch:1"
+            elif image_version == "PyTorch0.4.1-cuda9-cudnn7":
+                image = "wzh-pytorch:0"
+            elif image_version == "Tensorflow2.1.0-cuda10.1":
+                image = "wzh-tensorflow:2"
+            else:
+                raise RuntimeError(image_version)
+            port = Port.query.filter_by(type="flask", serverIp=server_ip).first().port
+            r = get("http://127.0.0.1:" + str(port) + "/newcontainer",
+                    {"path": path, "image": image, "jpasswd": "6666", "cpasswd": "8888", "user": nameinserver})
+            d = r.json()
+            c = Container(imageVersion=image_version, serverIp=server_ip, image=image, username=name, path=path,
+                          containerId=d["container_id"], containerName=d["name"], userInServer=nameinserver,
+                          uid=d["uid"], createTime=d["time"], jport=d["j_port"], tport=d["t_port"])
+            db.session.add(c)
+            db.session.commit()
+            return render_template("success.html", username=name, time=d["time"])
+        else:
+            return render_template("new.html", username=name, nameinserver=nameinserver)
+
+
+@app.route("/my")
+def my():
+    if "username" not in session:
+        return redirect(url_for("login"))
+    else:
+        name = session.get("username")
+        all_container = Container.query.filter_by(username=name).all()
+        return render_template("my.html", username=name, ac=all_container)
+
+
+@app.route("/delete")
+def del_container():
+    if "username" not in session:
+        return redirect(url_for("login"))
+    else:
+        cname = request.args.get("name")
+        name = session.get("username")
+        container = Container.query.filter_by(username=name, containerName=cname).first_or_404()
+        if container:
+            server_ip = container.serverIp
+            port = Port.query.filter_by(type="flask", serverIp=server_ip).first().port
+            r = get("http://127.0.0.1:" + str(port) + "/delcontainer", {"name": cname})
+            if r.text == "OK":
+                db.session.delete(container)
+                db.session.commit()
+                return redirect(url_for("my"))
+            else:
+                return "Error"
+        else:
+            return render_template("index.html", username=container)
+
+
+class Container(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    gmtCreate = db.Column(db.DateTime, default=datetime.now)
+    gmtModified = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)
+    serverIp = db.Column(db.String(80), unique=False, nullable=False)  # 服务器ip地址
+    containerId = db.Column(db.String(128), unique=True, nullable=False)
+    containerName = db.Column(db.String(64), unique=True, nullable=False)
+    path = db.Column(db.String(64), nullable=False)
+    imageVersion = db.Column(db.String(64), nullable=False)
+    image = db.Column(db.String(64), nullable=False)
+    userInServer = db.Column(db.String(80), unique=False, nullable=False)
+    uid = db.Column(db.Integer, unique=False, nullable=False)
+    createTime = db.Column(db.Float)
+    jport = db.Column(db.Integer)
+    tport = db.Column(db.Integer)
+    username = db.Column(db.String(80), unique=False, nullable=False)
+
+    def __repr__(self):
+        return '<Container Name %r>' % self.containerName
 
 
 # 用户表，包含姓名和密码
@@ -103,6 +201,7 @@ class User(db.Model):
     gmtModified = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)
     username = db.Column(db.String(80), unique=True, nullable=False)
     password = db.Column(db.String(120), unique=False, nullable=False)
+    userInServer = db.Column(db.String(80), unique=True, nullable=False)
 
     def __repr__(self):
         return '<User %r>' % self.username

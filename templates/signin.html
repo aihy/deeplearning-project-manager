@@ -20,7 +20,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="name" name="username"
-                                                   placeholder="请输入您的姓名" required data-error="请输入您的姓名">
+                                                   placeholder="请输入您的姓名（比如：王子豪）" required data-error="请输入您的姓名">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="name" name="nameinserver"
+                                                   placeholder="请输入您服务器内用户名（比如：zihao_wang）" required
+                                                   data-error="请输入您服务器内用户名">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -47,7 +53,7 @@
                                 </div>
                                 <div class="row justify-content-center">
                                     {% if error %}<p class="section-subtitle">{{ error }}</p>{% endif %}
-                                    {% if login %}
+                                    {% if error2 %}
                                         <p class="section-subtitle">您已经注册了，请直接<a href={{ url_for("login") }}>登录</a>！
                                         </p>{% endif %}
 
