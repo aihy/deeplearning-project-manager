@@ -4,5 +4,8 @@ from monitor import begin_monit
 
 if __name__ == "__main__":
     while True:
-        begin_monit()
+        try:
+            begin_monit()
+        except:
+            pass
         sleep(60 * 5)
