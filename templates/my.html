@@ -78,7 +78,7 @@
                                                     data-container="body" data-toggle="popover" data-placement="bottom"
                                                     data-html="true"
                                                     data-content="<ul><li>Mac用户请<button class='button' data-clipboard-text='while true;do ssh -p 5102 {{ c.userInServer }}@{{ c.serverIp }} -L {{ c.jport }}:127.0.0.1:{{ c.jport }} -N;done;'>点我</button>复制指令，到终端粘贴运行</li>
-                                                <li>Windows用户请<button class='button' data-clipboard-text='for /l %%i (1,1,10000) do ( ssh -p 5102 {{ c.userInServer }}@{{ c.serverIp }} -L {{ c.jport }}:127.0.0.1:{{ c.jport }} -N)'>点我</button>复制指令，到命令提示符右键粘贴运行</li>
+                                                <li>Windows用户请<button class='button' data-clipboard-text='for /l %i in (1,1,10000) do ( ssh -p 5102 {{ c.userInServer }}@{{ c.serverIp }} -L {{ c.jport }}:127.0.0.1:{{ c.jport }} -N)'>点我</button>复制指令，到命令提示符右键粘贴运行</li>
                                                 <li>然后<a href='http://127.0.0.1:{{ c.jport }}' target='_blank'>点我打开</a>，密码是6666</li></ul><div id='alert'></div>">
                                                 进入Jupyter Lab
                                             </button>
@@ -91,7 +91,7 @@
                                                     data-container="body" data-toggle="popover" data-placement="bottom"
                                                     data-html="true"
                                                     data-content="<ul><li>Mac用户请<button class='button' data-clipboard-text='while true;do ssh -p 5102 {{ c.userInServer }}@{{ c.serverIp }} -L {{ c.tport }}:127.0.0.1:{{ c.tport }} -N;done;'>点我</button>复制指令，到终端粘贴运行</li>
-                                                  <li>Windows用户请<button class='button' data-clipboard-text='for /l %%i (1,1,10000) do ( ssh -p 5102 {{ c.userInServer }}@{{ c.serverIp }} -L {{ c.tport }}:127.0.0.1:{{ c.tport }} -N)'>点我</button>复制指令，到命令提示符右键粘贴运行</li>
+                                                  <li>Windows用户请<button class='button' data-clipboard-text='for /l %i in (1,1,10000) do ( ssh -p 5102 {{ c.userInServer }}@{{ c.serverIp }} -L {{ c.tport }}:127.0.0.1:{{ c.tport }} -N)'>点我</button>复制指令，到命令提示符右键粘贴运行</li>
                                                   <li>然后<a href='http://127.0.0.1:{{ c.tport }}' target='_blank'>点我打开</li></ul></a><div id='alert'></div>">
                                                 进入Tensorboard
                                             </button>
