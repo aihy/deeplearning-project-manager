@@ -25,6 +25,10 @@ def index():
     else:
         return render_template("index.html", notlogin=1)
 
+@app.route("/usekey")
+def usekey():
+    return reder_template("usekey.html")
+
 
 @app.route("/getmonitordata")
 def gmd():
