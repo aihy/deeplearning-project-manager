@@ -27,7 +27,7 @@ def index():
 
 @app.route("/usekey")
 def usekey():
-    return reder_template("usekey.html")
+    return render_template("usekey.html")
 
 
 @app.route("/getmonitordata")
@@ -85,9 +85,9 @@ def signin():
             return render_template("signin.html", error="您两次输入的密码不一致！", notlogin=1)
         # TODO 把密码一致检测放到js里面
         # 先检查name是否在UserControl表中，UserControl表中的用户才允许注册
-        user_control = UserControl.query.filter_by(username=name).first()
-        if user_control is None:
-            return render_template("signin.html", error="您不在可注册范围内，请微信联系王子豪！", notlogin=1)
+        # user_control = UserControl.query.filter_by(username=name).first()
+        # if user_control is None:
+        #     return render_template("signin.html", error="您不在可注册范围内，请微信联系王子豪！", notlogin=1)
         # 再检查要注册的姓名是否已经注册了
         user = User.query.filter_by(username=name).first()
         if user is None:
@@ -119,6 +119,7 @@ def new():
         nameinserver = User.query.filter_by(username=name).first().userInServer
         if request.method == "POST":
             server_ip = request.form.get("server")
+            pro_name = request.form.get("proname")
             path = request.form.get("path")
             if path == '/':
                 render_template("new.html", username=name, nameinserver=nameinserver)
@@ -135,7 +136,8 @@ def new():
             r = get("http://127.0.0.1:" + str(port) + "/newcontainer",
                     {"path": path, "image": image, "jpasswd": "6666", "cpasswd": "8888", "user": nameinserver})
             d = r.json()
-            c = Container(imageVersion=image_version, serverIp=server_ip, image=image, username=name, path=path,
+            c = Container(proName=pro_name, imageVersion=image_version, serverIp=server_ip, image=image, username=name,
+                          path=path,
                           containerId=d["container_id"], containerName=d["name"], userInServer=nameinserver,
                           uid=d["uid"], createTime=d["time"], jport=d["j_port"], tport=d["t_port"])
             db.session.add(c)
@@ -193,6 +195,7 @@ class Container(db.Model):
     jport = db.Column(db.Integer)
     tport = db.Column(db.Integer)
     username = db.Column(db.String(80), unique=False, nullable=False)
+    proName = db.Column(db.String(80), unique=False, nullable=False)
 
     def __repr__(self):
         return '<Container Name %r>' % self.containerName

@@ -1319,7 +1319,7 @@ button:focus {
     padding: 30px 15px;
     background: #fff;
     border-radius: 4px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
     position: relative;
     transition: all 0.3s ease-in-out;
